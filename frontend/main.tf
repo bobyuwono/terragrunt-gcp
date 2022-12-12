@@ -12,9 +12,30 @@ resource "random_string" "random_suffix" {
   upper   = false
 }
 
-resource "google_compute_network" "vpc_network" {
-  name = "terraform-network-${random_string.random_suffix.result}"
-  depends_on = [
-    random_string.random_suffix
-  ]
+
+resource "google_storage_bucket" "one" {
+  name = "bucket-bobywn-1"
+  storage_class = "REGIONAL"
+  location = "us-east1"
 }
+
+resource "google_storage_bucket" "two" {
+  name = "bucket-bobywn-2"
+  storage_class = "REGIONAL"
+  location = "us-east1"
+}
+
+resource "google_storage_bucket" "three" {
+  name = "bucket-bobywn-3"
+  storage_class = "REGIONAL"
+  location = "us-east1"
+}
+
+
+
+# resource "google_compute_network" "vpc_network" {
+#   name = "terraform-network-${random_string.random_suffix.result}"
+#   depends_on = [
+#     random_string.random_suffix
+#   ]
+# }
