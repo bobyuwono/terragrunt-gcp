@@ -6,13 +6,20 @@ terraform {
     }
   }
 }
-resource "random_string" "random_suffix" {
-  length  = 3
-  special = false
-  upper   = false
+
+resource "google_storage_bucket" "one" {
+  name = "bucket-boyo-1"
+  storage_class = "REGIONAL"
+  location = "us-east1"
+}
+resource "google_storage_bucket" "two" {
+  name = "bucket-boyo-2"
+  storage_class = "REGIONAL"
+  location = "us-east1"
 }
 
-resource "google_compute_network" "vpc_network" {
-  name = "backend-network-${random_string.random_suffix.result}"
-  depends_on = [random_string.random_suffix]
+resource "google_storage_bucket" "three" {
+  name = "bucket-boyo-3"
+  storage_class = "REGIONAL"
+  location = "us-east1"
 }
