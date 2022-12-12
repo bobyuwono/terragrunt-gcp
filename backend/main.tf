@@ -12,11 +12,6 @@ resource "google_storage_bucket" "one" {
   storage_class = "REGIONAL"
   location = "us-east1"
 }
-resource "google_storage_bucket" "two" {
-  name = "bucket-boyo-2"
-  storage_class = "REGIONAL"
-  location = "us-east1"
-}
 
 resource "google_storage_bucket" "three" {
   name = "bucket-boyo-3"
