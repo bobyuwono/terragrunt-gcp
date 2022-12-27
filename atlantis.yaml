@@ -9,3 +9,13 @@ projects:
 - name: terra-backend
   dir: backend
   workflow: terragrunt
+
+workflows:
+  terragrunt:
+    plan:
+      steps:
+      - run: export 
+      - run: terragrunt run-all plan
+    apply:
+      steps:
+      - run: terragrunt run-all apply
