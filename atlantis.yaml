@@ -1,19 +1,5 @@
-# atlantis.yaml
 version: 3
 projects:
-- name: terra-frontend
+- name: project1-staging
   dir: frontend
-  workflow: terragrunt
-- name: terra-backend
-  dir: backend
-  workflow: terragrunt
-
-workflows:
-  terragrunt:
-    plan:
-      steps:
-      - run: export 
-      - run: terragrunt run-all plan
-    apply:
-      steps:
-      - run: terragrunt run-all apply
+  workflow: staging
