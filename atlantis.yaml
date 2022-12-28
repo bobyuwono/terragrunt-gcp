@@ -1,5 +1,0 @@
-version: 3
-projects:
-- name: project1-staging
-  dir: frontend
-  workflow: staging
