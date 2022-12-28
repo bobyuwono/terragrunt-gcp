@@ -1,5 +1,6 @@
 # atlantis.yaml
 version: 3
+allowed_overrides: [workflow]
 projects:
 # If two or more projects have the same dir and workspace, they must also have
 # a 'name' key to differentiate them.
