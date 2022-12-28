@@ -24,6 +24,12 @@ resource "google_storage_bucket" "three" {
   location = "us-east1"
 }
 
+resource "google_storage_bucket" "four" {
+  name = "bucket-bobywn-4"
+  storage_class = "REGIONAL"
+  location = "us-east1"
+}
+
 
 
 # resource "google_compute_network" "vpc_network" {
