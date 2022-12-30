@@ -11,15 +11,21 @@ generate "backend" {
     EOF
 }
 
+locals{
+    project = yamldecode(file(find_in_parent_folders("common_vars.yaml")))
+    region = yamldecode(file(find_in_parent_folders("common_vars.yaml")))
+    zone = yamldecode(file(find_in_parent_folders("common_vars.yaml")))
+}
+
 # stage/terragrunt.hcl
 generate "provider" {
   path = "provider.tf"
   if_exists = "overwrite_terragrunt"
   contents = <<EOF
   provider "google" {
-    project = var.project
-    region  = var.region
-    zone    = var.zone
+    project = local.project
+    region  = local.region
+    zone    = local.zone
     }
 EOF
 }
