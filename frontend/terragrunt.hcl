@@ -7,6 +7,6 @@ terraform{
 }
 
 inputs = {
-    bucket_name = "bucket-experiment-4"
+    bucket_name = "bucket-experiment-frontend"
     bucket_location = "us-central1-c"
 }
