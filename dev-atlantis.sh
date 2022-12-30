@@ -6,5 +6,5 @@ projects:
   workspace: $HEAD_BRANCH_NAME
   workflow: terragrunt
   autoplan:
-    enabled: true   
+    enabled: true  
 " > atlantis.yaml
