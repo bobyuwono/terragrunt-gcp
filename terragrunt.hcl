@@ -4,7 +4,7 @@ generate "backend" {
     contents = <<EOF
     terraform {
         backend "gcs"{
-            bucket = "terragrunting"
+            bucket = "big-terra"
             prefix = "${path_relative_to_include()}/terraform.tfstate"
         }
     }
