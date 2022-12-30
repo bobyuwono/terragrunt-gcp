@@ -21,9 +21,9 @@ generate "provider" {
   if_exists = "overwrite_terragrunt"
   contents = <<EOF
   provider "google" {
-    project = local.common_vars.project
-    region  = local.common_vars.region
-    zone    = local.common_vars.zone
+    project = var.project
+    region  = var.region
+    zone    = var.zone
     }
 EOF
 }
