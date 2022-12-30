@@ -12,9 +12,9 @@ generate "backend" {
 }
 
 locals{
-    project = yamldecode(file(find_in_parent_folders("common_vars.yaml")))
-    region = yamldecode(file(find_in_parent_folders("common_vars.yaml")))
-    zone = yamldecode(file(find_in_parent_folders("common_vars.yaml")))
+    project = yamldecode(file("common_vars.yaml"))
+    region = yamldecode(file("common_vars.yaml"))
+    zone = yamldecode(file("common_vars.yaml"))
 }
 
 # stage/terragrunt.hcl
