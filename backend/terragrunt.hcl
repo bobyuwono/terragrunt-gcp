@@ -3,9 +3,7 @@ include "root" {
 }
 
 locals{
-    project = yamldecode(file("common_vars.yaml"))
-    region = yamldecode(file("common_vars.yaml"))
-    zone = yamldecode(file("common_vars.yaml"))
+    common_vars = yamldecode(file("common_vars.yaml"))
 }
 
 terraform{
